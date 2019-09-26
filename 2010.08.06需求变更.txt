@@ -1,0 +1,95 @@
+增加"公司补充医保资金历年使用情况"查询功能。
+
+1、增加存储过程 Report_ZJLNSYQK
+
+-- =============================================
+-- Author:		cobe lee
+-- Create date: 2010-08-06
+-- Description:	公司补充医保资金历年使用情况。
+-- =============================================
+CREATE PROCEDURE [dbo].[Report_ZJLNSYQK]
+	-- Add the parameters for the stored procedure here
+	
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	-- 年度医保补助资金使用情况 zjlnsyqk
+
+	SELECT MPeriodId,
+			MPeriod.Name AS MPeriodName,
+			PsnType,
+			BXJE  -- 报销金额
+	FROM
+		(SELECT MPeriodId,	
+				PsnType,
+				SUM(BXJE) AS BXJE
+		 FROM AccountBook
+		 GROUP BY MPeriodId, PsnType) LNZJ   -- 历年资金
+			INNER JOIN 
+		(SELECT TOP (5) Id, [Name]
+		 FROM MPeriod
+		 ORDER BY BeginDate DESC) MPeriod ON LNZJ.MPeriodId = MPeriod.Id
+	ORDER BY MPeriodId, PsnType
+END
+
+2、增加存储过程 Report_ZJJDSYQK
+
+-- =============================================
+-- Author:		cobe lee
+-- Create date: 2010-08-08
+-- Description:	公司补充医保资金季度使用情况。
+-- =============================================
+CREATE PROCEDURE [dbo].[Report_ZJJDSYQK]
+	-- Add the parameters for the stored procedure here
+	@MPeriodId int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	-- 季度医保补助资金使用情况 zjjdsyqk
+
+	SELECT DATEPART(qq,BXDate) as Quarter,
+			PsnType,
+			SUM(BXJE) AS BXJE -- 报销金额
+	FROM AccountBook
+	WHERE MPeriodId = @MPeriodId
+	GROUP BY DATEPART(qq,BXDate), PsnType
+	ORDER BY Quarter, PsnType
+END
+
+3、增加存储过程  Report_GRLNBX
+
+-- =============================================
+-- Author:		cobe lee
+-- Create date: 2010-08-09
+-- Description:	查询个人历年报销情况
+-- =============================================
+CREATE PROCEDURE [dbo].[Report_GRLNBX]
+	-- Add the parameters for the stored procedure here
+	@YBH nchar(10)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT LEFT(MPeriod.[Name],6)  AS MPeriodName,
+		BXJE
+	FROM 
+		(SELECT MPeriodId, SUM(BXJE) AS BXJE
+		FROM AccountBook
+		WHERE YBH = @YBH
+		GROUP BY MPeriodId) AS LNBX  -- 历年报销
+
+		LEFT JOIN MPeriod ON LNBX.MPeriodId = MPeriod.Id
+
+	ORDER BY LNBX.MPeriodId
+END

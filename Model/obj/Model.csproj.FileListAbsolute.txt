@@ -1,0 +1,15 @@
+H:\网站开发\MRS\Model\bin\Debug\MRS.Model.dll
+H:\网站开发\MRS\Model\bin\Debug\MRS.Model.pdb
+H:\网站开发\MRS\Model\obj\Debug\ResolveAssemblyReference.cache
+H:\网站开发\MRS\Model\obj\Debug\MRS.Model.dll
+H:\网站开发\MRS\Model\obj\Debug\MRS.Model.pdb
+E:\网站开发\MRS\Model\bin\Debug\MRS.Model.dll
+E:\网站开发\MRS\Model\bin\Debug\MRS.Model.pdb
+E:\网站开发\MRS\Model\obj\Debug\ResolveAssemblyReference.cache
+E:\网站开发\MRS\Model\obj\Debug\MRS.Model.dll
+E:\网站开发\MRS\Model\obj\Debug\MRS.Model.pdb
+E:\网站开发\MRS\Model\bin\Release\MRS.Model.dll
+E:\网站开发\MRS\Model\bin\Release\MRS.Model.pdb
+E:\网站开发\MRS\Model\obj\Release\ResolveAssemblyReference.cache
+E:\网站开发\MRS\Model\obj\Release\MRS.Model.dll
+E:\网站开发\MRS\Model\obj\Release\MRS.Model.pdb

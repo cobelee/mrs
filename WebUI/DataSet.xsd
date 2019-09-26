@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet" msprop:Generator_DataSetName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Report_ZHJFYLF" msprop:Generator_UserTableName="Report_ZHJFYLF" msprop:Generator_RowDeletedName="Report_ZHJFYLFRowDeleted" msprop:Generator_RowChangedName="Report_ZHJFYLFRowChanged" msprop:Generator_RowClassName="Report_ZHJFYLFRow" msprop:Generator_RowChangingName="Report_ZHJFYLFRowChanging" msprop:Generator_RowEvArgName="Report_ZHJFYLFRowChangeEvent" msprop:Generator_RowEvHandlerName="Report_ZHJFYLFRowChangeEventHandler" msprop:Generator_TableClassName="Report_ZHJFYLFDataTable" msprop:Generator_TableVarName="tableReport_ZHJFYLF" msprop:Generator_RowDeletingName="Report_ZHJFYLFRowDeleting" msprop:Generator_TablePropName="Report_ZHJFYLF">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YBH" msprop:Generator_UserColumnName="YBH" msprop:Generator_ColumnVarNameInTable="columnYBH" msprop:Generator_ColumnPropNameInRow="YBH" msprop:Generator_ColumnPropNameInTable="YBHColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="JobNumber" msprop:Generator_UserColumnName="JobNumber" msprop:Generator_ColumnVarNameInTable="columnJobNumber" msprop:Generator_ColumnPropNameInRow="JobNumber" msprop:Generator_ColumnPropNameInTable="JobNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZHJFYLF" msprop:Generator_UserColumnName="ZHJFYLF" msprop:Generator_ColumnVarNameInTable="columnZHJFYLF" msprop:Generator_ColumnPropNameInRow="ZHJFYLF" msprop:Generator_ColumnPropNameInTable="ZHJFYLFColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GRZFuTotal" msprop:Generator_UserColumnName="GRZFuTotal" msprop:Generator_ColumnVarNameInTable="columnGRZFuTotal" msprop:Generator_ColumnPropNameInRow="GRZFuTotal" msprop:Generator_ColumnPropNameInTable="GRZFuTotalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GRZFeiTotal" msprop:Generator_UserColumnName="GRZFeiTotal" msprop:Generator_ColumnVarNameInTable="columnGRZFeiTotal" msprop:Generator_ColumnPropNameInRow="GRZFeiTotal" msprop:Generator_ColumnPropNameInTable="GRZFeiTotalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BXJETotal" msprop:Generator_UserColumnName="BXJETotal" msprop:Generator_ColumnVarNameInTable="columnBXJETotal" msprop:Generator_ColumnPropNameInRow="BXJETotal" msprop:Generator_ColumnPropNameInTable="BXJETotalColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_ZJLNSYQK" msprop:Generator_UserTableName="Report_ZJLNSYQK" msprop:Generator_RowDeletedName="Report_ZJLNSYQKRowDeleted" msprop:Generator_RowChangedName="Report_ZJLNSYQKRowChanged" msprop:Generator_RowClassName="Report_ZJLNSYQKRow" msprop:Generator_RowChangingName="Report_ZJLNSYQKRowChanging" msprop:Generator_RowEvArgName="Report_ZJLNSYQKRowChangeEvent" msprop:Generator_RowEvHandlerName="Report_ZJLNSYQKRowChangeEventHandler" msprop:Generator_TableClassName="Report_ZJLNSYQKDataTable" msprop:Generator_TableVarName="tableReport_ZJLNSYQK" msprop:Generator_RowDeletingName="Report_ZJLNSYQKRowDeleting" msprop:Generator_TablePropName="Report_ZJLNSYQK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPeriodId" msprop:Generator_UserColumnName="MPeriodId" msprop:Generator_ColumnPropNameInRow="MPeriodId" msprop:Generator_ColumnVarNameInTable="columnMPeriodId" msprop:Generator_ColumnPropNameInTable="MPeriodIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MPeriodName" msprop:Generator_UserColumnName="MPeriodName" msprop:Generator_ColumnPropNameInRow="MPeriodName" msprop:Generator_ColumnVarNameInTable="columnMPeriodName" msprop:Generator_ColumnPropNameInTable="MPeriodNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PsnType" msprop:Generator_UserColumnName="PsnType" msprop:Generator_ColumnPropNameInRow="PsnType" msprop:Generator_ColumnVarNameInTable="columnPsnType" msprop:Generator_ColumnPropNameInTable="PsnTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BXJE" msprop:Generator_UserColumnName="BXJE" msprop:Generator_ColumnPropNameInRow="BXJE" msprop:Generator_ColumnVarNameInTable="columnBXJE" msprop:Generator_ColumnPropNameInTable="BXJEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_ZJJDSYQK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Quarter" type="xs:string" minOccurs="0" />
+              <xs:element name="PsnType" type="xs:string" minOccurs="0" />
+              <xs:element name="BXJE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_GRLNBX">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPeriodName" type="xs:string" minOccurs="0" />
+              <xs:element name="BXJE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

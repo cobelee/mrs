@@ -1,0 +1,14 @@
+bin\Debug\MRS.IDAL.dll
+bin\Debug\MRS.IDAL.pdb
+bin\Debug\MRS.Model.dll
+bin\Debug\MRS.Model.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MRS.IDAL.dll
+obj\Debug\MRS.IDAL.pdb
+bin\Release\MRS.IDAL.dll
+bin\Release\MRS.IDAL.pdb
+bin\Release\MRS.Model.dll
+bin\Release\MRS.Model.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\MRS.IDAL.dll
+obj\Release\MRS.IDAL.pdb

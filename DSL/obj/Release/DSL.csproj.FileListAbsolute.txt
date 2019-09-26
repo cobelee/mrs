@@ -1,0 +1,5 @@
+E:\dotnet4.0开发\MRS\DSL\bin\Release\MRS.DSL.dll
+E:\dotnet4.0开发\MRS\DSL\bin\Release\MRS.DSL.pdb
+E:\dotnet4.0开发\MRS\DSL\obj\Release\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\DSL\obj\Release\MRS.DSL.dll
+E:\dotnet4.0开发\MRS\DSL\obj\Release\MRS.DSL.pdb

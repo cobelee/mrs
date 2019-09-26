@@ -1,0 +1,10 @@
+bin\Debug\MRS.DSL.dll
+bin\Debug\MRS.DSL.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MRS.DSL.dll
+obj\Debug\MRS.DSL.pdb
+bin\Release\MRS.DSL.dll
+bin\Release\MRS.DSL.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\MRS.DSL.dll
+obj\Release\MRS.DSL.pdb

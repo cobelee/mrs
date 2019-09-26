@@ -1,0 +1,15 @@
+I:\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.dll
+I:\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.pdb
+I:\dotnet4.0开发\MRS\DSL\obj\Debug\ResolveAssemblyReference.cache
+I:\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.dll
+I:\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.pdb
+E:\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.dll
+E:\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.pdb
+E:\dotnet4.0开发\MRS\DSL\obj\Debug\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.dll
+E:\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.pdb
+D:\BaiduYun\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.dll
+D:\BaiduYun\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.pdb
+D:\BaiduYun\dotnet4.0开发\MRS\DSL\obj\Debug\DSL.csprojResolveAssemblyReference.cache
+D:\BaiduYun\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.dll
+D:\BaiduYun\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.pdb

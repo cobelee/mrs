@@ -1,0 +1,242 @@
+需求变更
+
+将原先固定报销比例变更为分档次划分报销比例
+
+数据库修改
+
+1、添加数据表  BXRatio 专门记录报销比例数据
+USE [MRS]
+GO
+/****** 对象:  Table [dbo].[BXRatio]    脚本日期: 07/31/2010 07:17:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BXRatio](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[OrderNumber] [int] NULL CONSTRAINT [DF_BXRatio_OrderNumber]  DEFAULT ((0)),
+	[MinKBJE] [decimal](18, 2) NULL CONSTRAINT [DF_BXRatio_MinKBJE]  DEFAULT ((0)),
+	[MaxKBJE] [decimal](18, 2) NULL CONSTRAINT [DF_BXRatio_MaxKBJE]  DEFAULT ((0)),
+	[HspType] [nchar](10) COLLATE Chinese_PRC_CI_AS NULL CONSTRAINT [DF_BXRatio_HspType]  DEFAULT (''),
+	[Ratio] [decimal](18, 2) NULL CONSTRAINT [DF_BXRatio_BXRatio]  DEFAULT ((0)),
+ CONSTRAINT [PK_BXRatio] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'规则顺序号。（暂时无用）' ,@level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'BXRatio', @level2type=N'COLUMN', @level2name=N'OrderNumber'
+
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'可报销金额范围下限，不包含下限值。' ,@level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'BXRatio', @level2type=N'COLUMN', @level2name=N'MinKBJE'
+
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'可报销金额范围上限，包含上限值。' ,@level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'BXRatio', @level2type=N'COLUMN', @level2name=N'MaxKBJE'
+
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'就诊类型。' ,@level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'BXRatio', @level2type=N'COLUMN', @level2name=N'HspType'
+
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'报销比例。如90%，此处值记为0.90' ,@level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'BXRatio', @level2type=N'COLUMN', @level2name=N'Ratio'
+
+
+2、增加存储过程 Insert_BXRatio
+-- =============================================
+-- Author:      Cobe
+-- Create date: 2010-7-31 0:00:00
+-- Description:	新增报销比例规则
+-- =============================================
+CREATE PROCEDURE [Insert_BXRatio] 
+(
+    @OrderNumber int,
+    @MinKBJE decimal(18,2),
+    @MaxKBJE decimal(18,2),
+    @HspType nchar(10),
+    @Ratio decimal(18,2)
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    INSERT INTO [BXRatio]
+    (
+        OrderNumber,
+        MinKBJE,
+        MaxKBJE,
+        HspType,
+        Ratio
+    )
+    VALUES 
+    (
+        @OrderNumber,
+        @MinKBJE,
+        @MaxKBJE,
+        @HspType,
+        @Ratio
+    )
+    RETURN @@Error 
+
+END
+
+
+3、增加存储过程 Select_BXRatio_All
+/*功能：显示全部记录列表 */
+-- =============================================
+-- Author:      Cobe
+-- Create date: 2010-7-31 0:00:00
+-- Description:	查询所有报销比例规则。
+-- =============================================
+CREATE PROCEDURE [Select_BXRatio_All] 
+
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT
+        Id,
+        OrderNumber,
+        HspType,
+        MinKBJE,
+        MaxKBJE,
+        Ratio 
+    FROM [BXRatio]
+	ORDER BY OrderNumber
+
+END
+
+
+
+4、增加存储过程Delete_BXRatio
+
+/*功能：删除一条记录 */
+-- =============================================
+-- Author:      Cobe
+-- Create date: 2010-7-31 0:00:00
+-- Description:	删除报销比例规则
+-- =============================================
+CREATE PROCEDURE [Delete_BXRatio] 
+(
+    @Id int
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM [BXRatio] 
+    WHERE Id = @Id
+END
+
+
+5、增加标量值函数
+-- =============================================
+-- Author:		Cobe lee
+-- Create date: 2010-07-31
+-- Description:	计算指定医保年度内，某人的综合减负医疗费数额。
+-- =============================================
+ALTER FUNCTION [dbo].[GetZHJFYLF]
+(
+	-- Add the parameters for the function here
+	@MPeriodId int,
+	@YBH nchar(10)
+)
+RETURNS decimal(18,2)
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @ZHJFYLF decimal(18,2)
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @ZHJFYLF=sum(ISNULL(GRZFBao,0) + ISNULL(GRCDBao,0) + ISNULL(LNZHBao,0) - ISNULL(GRZFuHide,0))
+	FROM
+		(SELECT BXDId
+		FROM BXD
+		WHERE MPeriodId = @MPeriodId AND YBH = @YBH ) AS BXD
+		LEFT JOIN BXMX ON BXD.BXDId = BXMX.BXDId
+		
+
+	-- Return the result of the function
+	RETURN ISNULL9(@ZHJFYLF,0)
+
+END
+
+
+6、增加标量值函数
+
+-- =============================================
+-- Author:		cobe lee
+-- Create date: 2010-07-31
+-- Description:	检测当前综合减负医疗费ZHJFYLF是否匹配 报销比例规则。
+-- =============================================
+ALTER FUNCTION [dbo].[IsMatchRatioRule]
+(
+	-- Add the parameters for the function here
+	@ZHJFYLF decimal(18,2),
+	@HspType nchar(10),
+	@RatioRuleId int
+)
+RETURNS bit
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @IsMatch bit,
+			 @RuleMin DECIMAL(18,2),
+			 @RuleMax DECIMAL(18,2),
+			 @RuleHspType nchar(10),
+			@IsMatchMin bit,
+			@IsMatchMax bit,
+			@IsMatchHspType bit
+	-- Add the T-SQL statements to compute the return value here
+	SELECT 	@IsMatch = 0, @IsMatchMin =0, @IsMatchMax=0, @IsMatchHspType=0
+
+	SELECT @RuleMin = ISNULL(MinKBJE,0),
+			@RuleMax = ISNULL(MaxKBJE,0),
+			@RuleHspType = ISNULL(HspType,0)
+	FROM BXRatio
+	WHERE Id = @RatioRuleId
+
+	IF (@ZHJFYLF > @RuleMin) OR (@ZHJFYLF=0)
+		SET @IsMatchMin =1
+
+	IF (@RuleMax = 0)
+		SET @IsMatchMax =1;
+	ELSE 
+		IF @ZHJFYLF <= @RuleMax SET @IsMatchMax =1
+
+	IF @HspType = @RuleHspType
+		SET @IsMatchHspType = 1;
+
+	IF @IsMatchMin=1 AND @IsMatchMax=1 AND @IsMatchHspType=1
+		SET @IsMatch = 1
+	-- Return the result of the function
+	RETURN @IsMatch
+
+END
+
+
+
+7、增加存储过程
+
+-- =============================================
+-- Author:      Cobe
+-- Create date: 2010-7-31 0:00:00
+-- Description:	查询符合一定条件的报销比例。
+-- =============================================
+ALTER PROCEDURE [dbo].[Select_BXRatio] 
+(
+	-- Add the parameters for the function here
+	@MPeriodId int,
+	@YBH nchar(10),
+	@HspType nchar(10)
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @ZHJFYLF decimal(18,2),
+			@Ratio decimal(18,2)
+
+	SELECT @ZHJFYLF = dbo.GetZHJFYLF(@MPeriodId,@YBH);
+
+	SELECT TOP (1) ISNULL(Ratio,0) AS Ratio
+	FROM BXRatio
+	WHERE dbo.IsMatchRatioRule(@ZHJFYLF, @HspType, Id)=1
+
+END

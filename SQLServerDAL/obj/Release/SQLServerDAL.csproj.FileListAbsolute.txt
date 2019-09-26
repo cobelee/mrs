@@ -1,0 +1,13 @@
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.SQLServerDAL.dll
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.SQLServerDAL.pdb
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\Common.dll
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.DSL.dll
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.IDAL.dll
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.Model.dll
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.DSL.pdb
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.IDAL.pdb
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\MRS.Model.pdb
+E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\Common.xml
+E:\dotnet4.0开发\MRS\SQLServerDAL\obj\Release\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\SQLServerDAL\obj\Release\MRS.SQLServerDAL.dll
+E:\dotnet4.0开发\MRS\SQLServerDAL\obj\Release\MRS.SQLServerDAL.pdb

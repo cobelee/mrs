@@ -1,0 +1,15 @@
+I:\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.dll
+I:\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.pdb
+I:\dotnet4.0开发\MRS\Model\obj\Debug\ResolveAssemblyReference.cache
+I:\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.dll
+I:\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.pdb
+E:\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.dll
+E:\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.pdb
+E:\dotnet4.0开发\MRS\Model\obj\Debug\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.dll
+E:\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.pdb
+D:\BaiduYun\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.dll
+D:\BaiduYun\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.pdb
+D:\BaiduYun\dotnet4.0开发\MRS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\BaiduYun\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.dll
+D:\BaiduYun\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.pdb

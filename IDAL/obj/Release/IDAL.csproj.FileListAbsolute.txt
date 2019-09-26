@@ -1,0 +1,7 @@
+E:\dotnet4.0开发\MRS\IDAL\bin\Release\MRS.IDAL.dll
+E:\dotnet4.0开发\MRS\IDAL\bin\Release\MRS.IDAL.pdb
+E:\dotnet4.0开发\MRS\IDAL\bin\Release\MRS.Model.dll
+E:\dotnet4.0开发\MRS\IDAL\bin\Release\MRS.Model.pdb
+E:\dotnet4.0开发\MRS\IDAL\obj\Release\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\IDAL\obj\Release\MRS.IDAL.dll
+E:\dotnet4.0开发\MRS\IDAL\obj\Release\MRS.IDAL.pdb

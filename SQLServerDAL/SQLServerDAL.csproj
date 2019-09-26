@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DAE5C3C-D1D5-4737-8B7A-B58689AF68E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRS.SQLServerDAL</RootNamespace>
+    <AssemblyName>MRS.SQLServerDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/MRS.SQLServerDAL/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.24.4220.17883, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\bin\Release\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AccountBook.cs" />
+    <Compile Include="BXD.cs" />
+    <Compile Include="BXMX.cs" />
+    <Compile Include="BXRatio.cs" />
+    <Compile Include="DBProcedure\Charge_Up_BXD_To_AccountBook.cs" />
+    <Compile Include="DBProcedure\Create_BX_Warrant.cs" />
+    <Compile Include="DBProcedure\Delete_Account.cs" />
+    <Compile Include="DBProcedure\Delete_BXD.cs" />
+    <Compile Include="DBProcedure\Delete_BXMX.cs" />
+    <Compile Include="DBProcedure\Delete_BXRatio.cs" />
+    <Compile Include="DBProcedure\Delete_HspType.cs" />
+    <Compile Include="DBProcedure\Delete_MPeriod.cs" />
+    <Compile Include="DBProcedure\Delete_PsnType.cs" />
+    <Compile Include="DBProcedure\Insert_Account.cs" />
+    <Compile Include="DBProcedure\Insert_BXD.cs" />
+    <Compile Include="DBProcedure\Insert_BXMX.cs" />
+    <Compile Include="DBProcedure\Insert_BXRatio.cs" />
+    <Compile Include="DBProcedure\Insert_HspType.cs" />
+    <Compile Include="DBProcedure\Insert_MPeriod.cs" />
+    <Compile Include="DBProcedure\Insert_PsnType.cs" />
+    <Compile Include="DBProcedure\Report_GRLNBX.cs" />
+    <Compile Include="DBProcedure\Report_ZHJFYLF_Stat.cs" />
+    <Compile Include="DBProcedure\Report_ZJJDSYQK.cs" />
+    <Compile Include="DBProcedure\Report_ZJLNSYQK.cs" />
+    <Compile Include="DBProcedure\Save_BXMX_Stat_To_BXD.cs" />
+    <Compile Include="DBProcedure\Select_Account.cs" />
+    <Compile Include="DBProcedure\Select_AccountBook_PaymentList.cs" />
+    <Compile Include="DBProcedure\Select_Account_By_UserName.cs" />
+    <Compile Include="DBProcedure\Select_BXD_BY_BXDId.cs" />
+    <Compile Include="DBProcedure\Select_BXD_BY_YBH.cs" />
+    <Compile Include="DBProcedure\Select_BXD_Not_Charge_Up.cs" />
+    <Compile Include="DBProcedure\Select_BXMX_By_BXDId.cs" />
+    <Compile Include="DBProcedure\Select_BXMX_By_BxmxId.cs" />
+    <Compile Include="DBProcedure\Select_BXRatio.cs" />
+    <Compile Include="DBProcedure\Select_BXRatio_All.cs" />
+    <Compile Include="DBProcedure\Select_HspType.cs" />
+    <Compile Include="DBProcedure\Select_HspType_By_Id.cs" />
+    <Compile Include="DBProcedure\Select_MPeriod.cs" />
+    <Compile Include="DBProcedure\Select_PsnType.cs" />
+    <Compile Include="DBProcedure\Update_Account.cs" />
+    <Compile Include="DBProcedure\Update_BXD.cs" />
+    <Compile Include="DBProcedure\Update_BXMX.cs" />
+    <Compile Include="DBProcedure\Update_HspType.cs" />
+    <Compile Include="DBProcedure\Update_MPeriod.cs" />
+    <Compile Include="DBProcedure\Update_PsnType.cs" />
+    <Compile Include="DBTable\BXRatio.cs" />
+    <Compile Include="DS\Column.cs" />
+    <Compile Include="DS\ConnectionString.cs" />
+    <Compile Include="DS\Parameter.cs" />
+    <Compile Include="HspType.cs" />
+    <Compile Include="MPeriod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PsnType.cs" />
+    <Compile Include="Report.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSL\DSL.csproj">
+      <Project>{F579AF82-CE7B-40E1-9A72-E3F775B60562}</Project>
+      <Name>DSL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{75FDCAE6-D314-4FC9-89C1-4A2291025BD4}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{E020C371-DDC5-4754-ACBE-DDA60072C1AB}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

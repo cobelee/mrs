@@ -1,0 +1,221 @@
+1、要时刻能看到最近未记帐的报销单情况，并能对报销单进行操作。
+
+
+数据库变更：
+
+1、修改存储过程[Select_BXD_To_Charge_Up]
+	名称重构为：Select_BXD_Not_Charge_Up
+	-- =============================================
+-- Author:		Cobe lee
+-- Create date: 2011-01-07
+-- Description:	查询所有未记帐的报销单。
+-- =============================================
+ALTER PROCEDURE [dbo].[Select_BXD_To_Charge_Up]
+	-- Add the parameters for the stored procedure here
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT [BXDId]
+		   ,[MPeriodId]
+           ,[BXDate]
+           ,[YBH]
+           ,[PsnType]
+           ,[AttNumber]
+           ,[Accountant]
+           ,[YYF]
+           ,[BXJE]
+           ,[ZLF]
+           ,[TCJJ]
+           ,[GRZFei]
+           ,[GRZFu]
+           ,[Name]
+           ,[JobNumber]
+           ,[IdentityCard]
+           ,[Birthday]
+           ,[Organization]
+           ,[Sex]
+           ,[ChargeUpSign]
+    FROM BXD
+    WHERE ChargeUpSign = 'NochargeUP';
+END
+
+----------------------------------------------------------------------------
+
+2、修改存储过程 Charge_Up_BXD_To_AccountBook
+
+-- =============================================
+-- Author:		Cobe Lee
+-- Create date: <Create Date,,>
+-- Modify date: 2009年5月8日
+-- Description:	将所有未记帐的报销单登记到记帐簿。
+-- =============================================
+ALTER PROCEDURE [dbo].[Charge_Up_BXD_To_AccountBook]
+	-- Add the parameters for the stored procedure here
+    @Cashier nchar(10)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    BEGIN TRANSACTION
+	DECLARE @Now datetime
+
+	SELECT @Now = GetDate();
+
+	INSERT INTO AccountBook
+                ([BXDId]
+				,[MPeriodId]
+                ,[BXDate]
+                ,[YBH]
+                ,[PsnType]
+                ,[AttNumber]
+                ,[Accountant]
+                ,[YYF]
+                ,[BXJE]
+                ,[ZLF]
+                ,[TCJJ]
+                ,[GRZFei]
+                ,[GRZFu]
+                ,[GRZFuHide]
+                ,[Name]
+                ,[JobNumber]
+                ,[IdentityCard]
+                ,[Birthday]
+                ,[Organization]
+                ,[Sex]
+                ,[ChargeUpSign])
+    SELECT [BXDId]
+		   ,[MPeriodId]
+           ,[BXDate]
+           ,[YBH]
+           ,[PsnType]
+           ,[AttNumber]
+           ,[Accountant]
+           ,[YYF]
+           ,[BXJE]
+           ,[ZLF]
+           ,[TCJJ]
+           ,[GRZFei]
+           ,[GRZFu]
+           ,[GRZFuHide]
+           ,[Name]
+           ,[JobNumber]
+           ,[IdentityCard]
+           ,[Birthday]
+           ,[Organization]
+           ,[Sex]
+           ,[ChargeUpSign]
+    FROM BXD
+    WHERE ChargeUpSign = 'NochargeUP';
+
+    UPDATE BXD
+    Set ChargeUpSign = 'IsChargeUp'
+    WHERE ChargeUpSign = 'NochargeUP';
+        
+    UPDATE AccountBook
+    Set ChargeUpSign = 'IsChargeUp',
+        ChargeUpDate = @Now,
+        Cashier = @Cashier
+    WHERE ChargeUpSign = 'NochargeUP';
+
+    IF @@error <> 0  --发生错误
+        BEGIN
+            ROLLBACK TRANSACTION
+            SELECT 0
+        END
+    ELSE
+        BEGIN
+            COMMIT TRANSACTION
+            SELECT 1    --执行成功
+        END
+    
+END
+
+
+---------------------------------------------------------------------
+
+3、修改存储过程 Update_BXMX
+
+-- =============================================
+-- Author:		Cobe lee
+-- Create date: 2011-01-09
+-- Description:	修改报销发票明细记录。
+-- =============================================
+ALTER PROCEDURE [dbo].[Update_BXMX]
+	-- Add the parameters for the stored procedure here
+	@BXMXId int,
+	@FpDate datetime,
+    @YYF decimal(18,2) ,
+    @GRZFei decimal(18,2) ,
+    @GRZFu decimal(18,2),
+	@GRZFuHide decimal(18,2),
+    @GRZFBao decimal(18,2),
+    @GRCDBao  decimal(18,2),
+    @LNZHBao decimal(18,2),
+    @TCJJ  decimal(18,2),
+    @JZFS nchar(10),
+    @ReimbursementRatio  decimal(18,2)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	UPDATE [MRS].[dbo].[BXMX]
+    SET  [FPDate] = @FpDate
+		,[YYF] = @YYF
+		,[GRZFei] = @GRZFei
+		,[GRZFu] = @GRZFu
+		,[GRZFuHide] = @GRZFuHide
+      ,[GRZFBao] = @GRZFBao
+      ,[GRCDBao] = @GRCDBao
+      ,[LNZHBao] = @LNZHBao
+      ,[TCJJ] = @TCJJ
+      ,[JZFS] = @JZFS
+      ,[ReimbursementRatio] = @ReimbursementRatio
+    WHERE BXMXId = @BXMXId
+END
+
+
+---------------------------------------------------------------------
+
+4、创建新存储过程  Select_BXMX_By_BxmxId
+
+-- =============================================
+-- Author:		Cobe lee
+-- Create date: 2011-01-09
+-- Description:	查询某条报销发票明细记录。
+-- =============================================
+CREATE PROCEDURE [dbo].[Select_BXMX_By_BxmxId]
+	-- Add the parameters for the stored procedure here
+	@BxmxId int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT [BXMXId]
+      ,[BXDId]
+      ,[FPDate]
+      ,[YYF]
+      ,[GRZFei]
+      ,[GRZFu]
+      ,[GRZFuHide]
+      ,[GRZFBao]
+      ,[GRCDBao]
+      ,[LNZHBao]
+      ,[TCJJ]
+      ,[JZFS]
+      ,[ReimbursementRatio]
+  FROM [BXMX]
+  WHERE [BXMXId] = @BxmxId
+END

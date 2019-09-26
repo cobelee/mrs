@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PMS.BLL</name>
+    </assembly>
+    <members>
+        <member name="T:PMS.BLL.Department">
+            <summary>
+            部门信息操作类.
+            </summary>
+        </member>
+        <member name="M:PMS.BLL.Department.GetDepartments">
+            <summary>
+            获取部门名称列表.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.BLL.Personnel">
+            <summary>
+            公司职工信息操作类.
+            </summary>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelsAll">
+            <summary>
+            获取所有职工信息.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelById(System.String)">
+            <summary>
+            <para>根据ID查询人员信息.但有重复现象,建议使用工号查询职工信息的方式.</para>
+            <para>　　可以查询工贸、泰达公司、内退人员及兴业劳务人员信息.</para>
+            </summary>
+            <param name="id">个人id.</param>
+            <returns>返回职工个人信息.</returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelByJobNumber(System.String)">
+            <summary>
+            <para>根据工号查询人员信息.</para>
+            <para>　　可以查询工贸、泰达公司、内退人员及兴业劳务人员信息.</para>
+            </summary>
+            <param name="jobNumber">职工工号.</param>
+            <returns>返回职工个人信息.</returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonInfoByJobNumber(System.String)">
+            <summary>
+            <para>根据工号查询人员简单信息.</para>
+            <para>　　可以查询工贸、泰达公司、内退人员及兴业劳务人员信息.</para>
+            </summary>
+            <param name="jobNumber">职工工号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelsByName(System.String)">
+            <summary>
+            <para>根据职工姓名，查询职工信息。</para>
+            <para>　　查询范围：工贸公司、泰达公司。退休职工、兴业劳务公司职工不能查询。</para>
+            </summary>
+            <param name="name">职工姓名。</param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelsByOrganization(System.String)">
+            <summary>
+            根据部门信息，查询该部门下所有人员。
+            </summary>
+            <param name="Organization">部门信息。</param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonInfoListByOrganization(System.String)">
+            <summary>
+            根据部门信息，查询该部门下所有人员。
+            </summary>
+            <param name="organizationName">部门信息。</param>
+            <returns>返回人员信息列表。</returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelsByTelephone(System.String)">
+            <summary>
+            根据电话号码查询职工列表.
+            </summary>
+            <param name="TelephoneNumber">电话号码.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelsByECommunication(System.String)">
+            <summary>
+            根据电子通讯信息查询职工列表.
+            </summary>
+            <param name="ECommunication"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.ExistJobNumber(System.String)">
+            <summary>
+            <para>根据职工工号，检测人员库中是否存在该职工。</para>
+            <para>　　查询范围：工贸公司、泰达公司、内退人员及兴业劳务人员.</para>
+            </summary>
+            <param name="jobNumber">职工工号。</param>
+            <returns>存在返回<c>true</c>，不存在返回<c>false</c>。</returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.GetPersonnelsByBlurInfo(System.String)">
+            <summary>
+            根据模糊信息查询职工.
+            </summary>
+            <param name="BlurInfo">模糊信息.</param>
+            <returns>返回职工集合.</returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.UpdateContactInfoById(System.String,PMS.Model.Personnel)">
+            <summary>
+            根据职工Id号，更新职工信息.
+            </summary>
+            <param name="Id">职工Id号。</param>
+            <param name="Personnel">包含更新内容的职工类。</param>
+            <returns></returns>
+        </member>
+        <member name="M:PMS.BLL.Personnel.UpdateContactInfoByJobNumber(System.String,PMS.Model.Personnel)">
+            <summary>
+            根据职工工号，更新职工信息。
+            </summary>
+            <param name="JobNumber">职工工号。</param>
+            <param name="Personnel">包含更新内容的职工类。</param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.BLL.DutyPerson">
+            <summary>
+            值班人员操作类.
+            </summary>
+        </member>
+        <member name="M:PMS.BLL.DutyPerson.GetDutyPerson(System.String)">
+            <summary>
+            根据工号获取值班人员信息.
+            </summary>
+            <param name="JobNumber">工号.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PMS.BLL.MedicarePerson">
+            <summary>
+            医保人员操作类.
+            </summary>
+        </member>
+        <member name="M:PMS.BLL.MedicarePerson.GetMedicarePerson(System.String)">
+            <summary>
+            根据职工医保号获取值班医保信息.
+            </summary>
+            <param name="MedicareId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,9 @@
+E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.DALFactory.dll
+E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.DALFactory.pdb
+E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.IDAL.dll
+E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.Model.dll
+E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.IDAL.pdb
+E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.Model.pdb
+E:\dotnet4.0开发\MRS\DALFactory\obj\Release\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\DALFactory\obj\Release\MRS.DALFactory.dll
+E:\dotnet4.0开发\MRS\DALFactory\obj\Release\MRS.DALFactory.pdb

@@ -1,0 +1,5 @@
+E:\dotnet4.0开发\MRS\Model\bin\Release\MRS.Model.dll
+E:\dotnet4.0开发\MRS\Model\bin\Release\MRS.Model.pdb
+E:\dotnet4.0开发\MRS\Model\obj\Release\ResolveAssemblyReference.cache
+E:\dotnet4.0开发\MRS\Model\obj\Release\MRS.Model.dll
+E:\dotnet4.0开发\MRS\Model\obj\Release\MRS.Model.pdb
