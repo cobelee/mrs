@@ -13,3 +13,7 @@ D:\BaiduYun\dotnet4.0开发\MRS\DSL\bin\Debug\MRS.DSL.pdb
 D:\BaiduYun\dotnet4.0开发\MRS\DSL\obj\Debug\DSL.csprojResolveAssemblyReference.cache
 D:\BaiduYun\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.dll
 D:\BaiduYun\dotnet4.0开发\MRS\DSL\obj\Debug\MRS.DSL.pdb
+D:\GithubRepoBank\MRS\DSL\bin\Debug\MRS.DSL.dll
+D:\GithubRepoBank\MRS\DSL\bin\Debug\MRS.DSL.pdb
+D:\GithubRepoBank\MRS\DSL\obj\Debug\MRS.DSL.dll
+D:\GithubRepoBank\MRS\DSL\obj\Debug\MRS.DSL.pdb

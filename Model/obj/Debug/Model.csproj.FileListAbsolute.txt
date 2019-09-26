@@ -13,3 +13,7 @@ D:\BaiduYun\dotnet4.0开发\MRS\Model\bin\Debug\MRS.Model.pdb
 D:\BaiduYun\dotnet4.0开发\MRS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\BaiduYun\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.dll
 D:\BaiduYun\dotnet4.0开发\MRS\Model\obj\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\Model\bin\Debug\MRS.Model.dll
+D:\GithubRepoBank\MRS\Model\bin\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\Model\obj\Debug\MRS.Model.dll
+D:\GithubRepoBank\MRS\Model\obj\Debug\MRS.Model.pdb

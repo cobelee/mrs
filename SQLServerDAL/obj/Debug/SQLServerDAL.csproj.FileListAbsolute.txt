@@ -37,3 +37,14 @@ D:\BaiduYun\dotnet4.0开发\MRS\SQLServerDAL\bin\Debug\Common.xml
 D:\BaiduYun\dotnet4.0开发\MRS\SQLServerDAL\obj\Debug\SQLServerDAL.csprojResolveAssemblyReference.cache
 D:\BaiduYun\dotnet4.0开发\MRS\SQLServerDAL\obj\Debug\MRS.SQLServerDAL.dll
 D:\BaiduYun\dotnet4.0开发\MRS\SQLServerDAL\obj\Debug\MRS.SQLServerDAL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.SQLServerDAL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.SQLServerDAL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.DSL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.Model.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.DSL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\obj\Debug\SQLServerDAL.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\SQLServerDAL\obj\Debug\MRS.SQLServerDAL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\obj\Debug\MRS.SQLServerDAL.pdb

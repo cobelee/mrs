@@ -19,3 +19,10 @@ D:\BaiduYun\dotnet4.0开发\MRS\IDAL\bin\Debug\MRS.Model.pdb
 D:\BaiduYun\dotnet4.0开发\MRS\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
 D:\BaiduYun\dotnet4.0开发\MRS\IDAL\obj\Debug\MRS.IDAL.dll
 D:\BaiduYun\dotnet4.0开发\MRS\IDAL\obj\Debug\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\IDAL\bin\Debug\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\IDAL\bin\Debug\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\IDAL\bin\Debug\MRS.Model.dll
+D:\GithubRepoBank\MRS\IDAL\bin\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\IDAL\obj\Debug\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\IDAL\obj\Debug\MRS.IDAL.pdb

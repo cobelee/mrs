@@ -7,3 +7,12 @@ E:\dotnet4.0开发\MRS\DALFactory\bin\Release\MRS.Model.pdb
 E:\dotnet4.0开发\MRS\DALFactory\obj\Release\ResolveAssemblyReference.cache
 E:\dotnet4.0开发\MRS\DALFactory\obj\Release\MRS.DALFactory.dll
 E:\dotnet4.0开发\MRS\DALFactory\obj\Release\MRS.DALFactory.pdb
+D:\GithubRepoBank\MRS\DALFactory\bin\Release\MRS.DALFactory.dll
+D:\GithubRepoBank\MRS\DALFactory\bin\Release\MRS.DALFactory.pdb
+D:\GithubRepoBank\MRS\DALFactory\bin\Release\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\DALFactory\bin\Release\MRS.Model.dll
+D:\GithubRepoBank\MRS\DALFactory\bin\Release\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\DALFactory\bin\Release\MRS.Model.pdb
+D:\GithubRepoBank\MRS\DALFactory\obj\Release\DALFactory.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\DALFactory\obj\Release\MRS.DALFactory.dll
+D:\GithubRepoBank\MRS\DALFactory\obj\Release\MRS.DALFactory.pdb

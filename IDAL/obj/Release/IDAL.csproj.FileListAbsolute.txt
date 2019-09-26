@@ -5,3 +5,10 @@ E:\dotnet4.0开发\MRS\IDAL\bin\Release\MRS.Model.pdb
 E:\dotnet4.0开发\MRS\IDAL\obj\Release\ResolveAssemblyReference.cache
 E:\dotnet4.0开发\MRS\IDAL\obj\Release\MRS.IDAL.dll
 E:\dotnet4.0开发\MRS\IDAL\obj\Release\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\IDAL\bin\Release\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\IDAL\bin\Release\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\IDAL\bin\Release\MRS.Model.dll
+D:\GithubRepoBank\MRS\IDAL\bin\Release\MRS.Model.pdb
+D:\GithubRepoBank\MRS\IDAL\obj\Release\IDAL.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\IDAL\obj\Release\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\IDAL\obj\Release\MRS.IDAL.pdb

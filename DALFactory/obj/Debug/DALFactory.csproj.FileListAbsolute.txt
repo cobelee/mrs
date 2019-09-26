@@ -25,3 +25,12 @@ D:\BaiduYun\dotnet4.0开发\MRS\DALFactory\bin\Debug\MRS.Model.pdb
 D:\BaiduYun\dotnet4.0开发\MRS\DALFactory\obj\Debug\DALFactory.csprojResolveAssemblyReference.cache
 D:\BaiduYun\dotnet4.0开发\MRS\DALFactory\obj\Debug\MRS.DALFactory.dll
 D:\BaiduYun\dotnet4.0开发\MRS\DALFactory\obj\Debug\MRS.DALFactory.pdb
+D:\GithubRepoBank\MRS\DALFactory\bin\Debug\MRS.DALFactory.dll
+D:\GithubRepoBank\MRS\DALFactory\bin\Debug\MRS.DALFactory.pdb
+D:\GithubRepoBank\MRS\DALFactory\bin\Debug\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\DALFactory\bin\Debug\MRS.Model.dll
+D:\GithubRepoBank\MRS\DALFactory\bin\Debug\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\DALFactory\bin\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\DALFactory\obj\Debug\DALFactory.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\DALFactory\obj\Debug\MRS.DALFactory.dll
+D:\GithubRepoBank\MRS\DALFactory\obj\Debug\MRS.DALFactory.pdb

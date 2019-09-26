@@ -50,8 +50,9 @@ namespace MRS.MRModule
             //    }
             //}
 
+            // 一张纸打印上下两联，自2019年9月26日后，改为只打印一联。
             DrawSingleWarrant(WarrantGraphic, new Point(65, 70));
-            DrawSingleWarrant(WarrantGraphic, new Point(65, 600));
+            //DrawSingleWarrant(WarrantGraphic, new Point(65, 600));
         }
 
         private void DrawSingleWarrant(Graphics WarrantGraphic, System.Drawing.Point WarrantSite)

@@ -9,3 +9,14 @@ E:\dotnet4.0开发\MRS\BLL\bin\Release\MRS.Model.pdb
 E:\dotnet4.0开发\MRS\BLL\obj\Release\ResolveAssemblyReference.cache
 E:\dotnet4.0开发\MRS\BLL\obj\Release\MRS.BLL.dll
 E:\dotnet4.0开发\MRS\BLL\obj\Release\MRS.BLL.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.BLL.dll
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.BLL.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.DALFactory.dll
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.Model.dll
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.DALFactory.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Release\MRS.Model.pdb
+D:\GithubRepoBank\MRS\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\BLL\obj\Release\MRS.BLL.dll
+D:\GithubRepoBank\MRS\BLL\obj\Release\MRS.BLL.pdb

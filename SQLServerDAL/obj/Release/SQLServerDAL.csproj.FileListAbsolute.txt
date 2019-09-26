@@ -11,3 +11,14 @@ E:\dotnet4.0开发\MRS\SQLServerDAL\bin\Release\Common.xml
 E:\dotnet4.0开发\MRS\SQLServerDAL\obj\Release\ResolveAssemblyReference.cache
 E:\dotnet4.0开发\MRS\SQLServerDAL\obj\Release\MRS.SQLServerDAL.dll
 E:\dotnet4.0开发\MRS\SQLServerDAL\obj\Release\MRS.SQLServerDAL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.SQLServerDAL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.SQLServerDAL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.DSL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.Model.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.DSL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\bin\Release\MRS.Model.pdb
+D:\GithubRepoBank\MRS\SQLServerDAL\obj\Release\SQLServerDAL.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\SQLServerDAL\obj\Release\MRS.SQLServerDAL.dll
+D:\GithubRepoBank\MRS\SQLServerDAL\obj\Release\MRS.SQLServerDAL.pdb

@@ -31,3 +31,14 @@ D:\BaiduYun\dotnet4.0开发\MRS\BLL\bin\Debug\MRS.Model.pdb
 D:\BaiduYun\dotnet4.0开发\MRS\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\BaiduYun\dotnet4.0开发\MRS\BLL\obj\Debug\MRS.BLL.dll
 D:\BaiduYun\dotnet4.0开发\MRS\BLL\obj\Debug\MRS.BLL.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.BLL.dll
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.BLL.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.DALFactory.dll
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.IDAL.dll
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.Model.dll
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.DALFactory.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.IDAL.pdb
+D:\GithubRepoBank\MRS\BLL\bin\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\GithubRepoBank\MRS\BLL\obj\Debug\MRS.BLL.dll
+D:\GithubRepoBank\MRS\BLL\obj\Debug\MRS.BLL.pdb
