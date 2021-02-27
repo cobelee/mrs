@@ -56,6 +56,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.lbBxdId = new System.Windows.Forms.ToolStripLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -68,6 +69,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lklbAbout);
@@ -88,11 +90,11 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 510);
+            this.label1.Location = new System.Drawing.Point(19, 490);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 12);
             this.label1.TabIndex = 9;
-            this.label1.Text = "当前版本号:1.5.2";
+            this.label1.Text = "当前版本号:1.5.4";
             // 
             // pictureBox1
             // 
@@ -109,7 +111,7 @@
             // 
             this.lklbAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lklbAbout.AutoSize = true;
-            this.lklbAbout.Location = new System.Drawing.Point(49, 472);
+            this.lklbAbout.Location = new System.Drawing.Point(49, 453);
             this.lklbAbout.Name = "lklbAbout";
             this.lklbAbout.Size = new System.Drawing.Size(29, 12);
             this.lklbAbout.TabIndex = 7;
@@ -121,7 +123,7 @@
             // 
             this.lklbTechSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lklbTechSupport.AutoSize = true;
-            this.lklbTechSupport.Location = new System.Drawing.Point(37, 491);
+            this.lklbTechSupport.Location = new System.Drawing.Point(37, 471);
             this.lklbTechSupport.Name = "lklbTechSupport";
             this.lklbTechSupport.Size = new System.Drawing.Size(53, 12);
             this.lklbTechSupport.TabIndex = 6;
@@ -241,20 +243,20 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 21);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(634, 480);
+            this.tabPage1.Size = new System.Drawing.Size(634, 479);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 21);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(634, 480);
+            this.tabPage2.Size = new System.Drawing.Size(634, 479);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -290,13 +292,13 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(89, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(92, 22);
             this.toolStripLabel1.Text = "当前操作会计：";
             // 
             // tslbAccountant
             // 
             this.tslbAccountant.Name = "tslbAccountant";
-            this.tslbAccountant.Size = new System.Drawing.Size(77, 22);
+            this.tslbAccountant.Size = new System.Drawing.Size(80, 22);
             this.tslbAccountant.Text = "会计真实姓名";
             // 
             // toolStripSeparator1
@@ -307,7 +309,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(65, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(68, 22);
             this.toolStripLabel2.Text = "报销人员：";
             // 
             // lbBxrName
@@ -319,7 +321,7 @@
             // lbYbh
             // 
             this.lbYbh.Name = "lbYbh";
-            this.lbYbh.Size = new System.Drawing.Size(35, 22);
+            this.lbYbh.Size = new System.Drawing.Size(37, 22);
             this.lbYbh.Text = "[ybh]";
             // 
             // toolStripSeparator2
@@ -330,14 +332,24 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(65, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(68, 22);
             this.toolStripLabel3.Text = "报销单号：";
             // 
             // lbBxdId
             // 
             this.lbBxdId.Name = "lbBxdId";
-            this.lbBxdId.Size = new System.Drawing.Size(41, 22);
+            this.lbBxdId.Size = new System.Drawing.Size(45, 22);
             this.lbBxdId.Text = "[bxdh]";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 511);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 12);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Update:2019.11.15";
             // 
             // BxMain
             // 
@@ -393,5 +405,6 @@
         private System.Windows.Forms.LinkLabel lklbAbout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

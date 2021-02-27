@@ -46,5 +46,6 @@ namespace MRS.DSL
         public static string CREATE_BX_WARRANT = "Create_BX_Warrant";
         public static string CHARGE_UP_BXD_TO_ACCOUNTBOOK = "Charge_Up_BXD_To_AccountBook";
         public static string REPORT_ZHJFYLF_STAT = "Report_ZHJFYLF_Stat";        //综合减负医疗费报告
+        public static string REPORT_ZHJFYLF_STAT_BYMONTH = "Report_ZHJFYLF_Stat_ByMonth";        //综合减负医疗费报告，按指定月份统计
     }
 }

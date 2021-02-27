@@ -62,6 +62,8 @@
             this.gvIndividual = new System.Windows.Forms.DataGridView();
             this.gvGR_BXMX = new System.Windows.Forms.DataGridView();
             this.WarrantPrintDocument = new System.Drawing.Printing.PrintDocument();
+            this.btnSelectPrint = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -112,6 +114,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSelectPrint);
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.btnPrintPreview);
             this.panel1.Controls.Add(this.btnCollapse);
@@ -123,7 +126,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(316, 13);
+            this.btnPrint.Location = new System.Drawing.Point(246, 13);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(92, 23);
             this.btnPrint.TabIndex = 7;
@@ -133,11 +136,11 @@
             // 
             // btnPrintPreview
             // 
-            this.btnPrintPreview.Location = new System.Drawing.Point(167, 13);
+            this.btnPrintPreview.Location = new System.Drawing.Point(127, 13);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(92, 23);
             this.btnPrintPreview.TabIndex = 6;
-            this.btnPrintPreview.Text = "打印预览(&P)";
+            this.btnPrintPreview.Text = "打印预览(&V)";
             this.btnPrintPreview.UseVisualStyleBackColor = true;
             this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
@@ -269,11 +272,11 @@
             // lbBXPersonName
             // 
             this.lbBXPersonName.AutoSize = true;
-            this.lbBXPersonName.Font = new System.Drawing.Font("楷体_GB2312", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbBXPersonName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbBXPersonName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbBXPersonName.Location = new System.Drawing.Point(18, 15);
             this.lbBXPersonName.Name = "lbBXPersonName";
-            this.lbBXPersonName.Size = new System.Drawing.Size(99, 27);
+            this.lbBXPersonName.Size = new System.Drawing.Size(98, 31);
             this.lbBXPersonName.TabIndex = 7;
             this.lbBXPersonName.Text = "岑海菊";
             // 
@@ -442,14 +445,28 @@
             // 
             this.WarrantPrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.WarrantPrintDocument_PrintPage);
             // 
+            // btnSelectPrint
+            // 
+            this.btnSelectPrint.Location = new System.Drawing.Point(365, 13);
+            this.btnSelectPrint.Name = "btnSelectPrint";
+            this.btnSelectPrint.Size = new System.Drawing.Size(92, 23);
+            this.btnSelectPrint.TabIndex = 8;
+            this.btnSelectPrint.Text = "设置后打印(&P)";
+            this.btnSelectPrint.UseVisualStyleBackColor = true;
+            this.btnSelectPrint.Click += new System.EventHandler(this.btnSelectPrint_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.Document = this.WarrantPrintDocument;
+            this.printDialog1.UseEXDialog = true;
+            // 
             // IndividualQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 420);
             this.Controls.Add(this.splitContainer1);
             this.Name = "IndividualQuery";
-            this.Text = "个人清单查询窗口";
+            this.Size = new System.Drawing.Size(783, 420);
             this.Load += new System.EventHandler(this.IndividualQuery_Load);
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -505,6 +522,7 @@
         private System.Windows.Forms.Button btnPrintPreview;
         private System.Drawing.Printing.PrintDocument WarrantPrintDocument;
         private System.Windows.Forms.Button btnPrint;
-
+        private System.Windows.Forms.Button btnSelectPrint;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

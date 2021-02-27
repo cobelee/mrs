@@ -245,6 +245,7 @@ namespace MRS.UC
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
             PrintPreviewDialog ppd = new PrintPreviewDialog();
+
             ppd.Document = WarrantPrintDocument;
             ppd.PrintPreviewControl.Zoom = 1;
             ppd.Width = 650;
@@ -297,6 +298,17 @@ namespace MRS.UC
         private void btnReload_Click(object sender, EventArgs e)
         {
             ShowBXDList();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (printDialog1.ShowDialog(this) == DialogResult.OK)
+            {
+                printDialog1.Document = WarrantPrintDocument;
+                WarrantPrintDocument.PrinterSettings = printDialog1.PrinterSettings;
+                WarrantPrintDocument.Print();
+            }
+            
         }
     }
 

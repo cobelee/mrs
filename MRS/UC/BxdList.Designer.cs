@@ -32,12 +32,14 @@
             this.btnBalance = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.gvBXD_Not_ChargeUP = new System.Windows.Forms.DataGridView();
             this.btnAddFpmx = new System.Windows.Forms.Button();
             this.gvBXMX = new System.Windows.Forms.DataGridView();
             this.WarrantPrintDocument = new System.Drawing.Printing.PrintDocument();
-            this.btnReload = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -98,6 +100,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.splitContainer1.Panel1.Controls.Add(this.btnPrint);
             this.splitContainer1.Panel1.Controls.Add(this.btnReload);
             this.splitContainer1.Panel1.Controls.Add(this.btnPrintPreview);
             this.splitContainer1.Panel1.Controls.Add(this.btnBalance);
@@ -114,6 +117,34 @@
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 4;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.BurlyWood;
+            this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Location = new System.Drawing.Point(483, 37);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(90, 23);
+            this.btnPrint.TabIndex = 9;
+            this.btnPrint.Text = "设置后打印(&P)";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReload.FlatAppearance.BorderColor = System.Drawing.Color.BurlyWood;
+            this.btnReload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReload.Location = new System.Drawing.Point(483, 140);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(90, 23);
+            this.btnReload.TabIndex = 8;
+            this.btnReload.Text = "重载数据(&R)";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // btnPrintPreview
             // 
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -124,7 +155,7 @@
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(90, 23);
             this.btnPrintPreview.TabIndex = 7;
-            this.btnPrintPreview.Text = "打印预览(&P)";
+            this.btnPrintPreview.Text = "打印预览(&V)";
             this.btnPrintPreview.UseVisualStyleBackColor = true;
             this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
@@ -133,9 +164,9 @@
             this.gvBXD_Not_ChargeUP.AllowUserToAddRows = false;
             this.gvBXD_Not_ChargeUP.AllowUserToDeleteRows = false;
             this.gvBXD_Not_ChargeUP.AllowUserToOrderColumns = true;
-            this.gvBXD_Not_ChargeUP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvBXD_Not_ChargeUP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gvBXD_Not_ChargeUP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gvBXD_Not_ChargeUP.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gvBXD_Not_ChargeUP.BackgroundColor = System.Drawing.Color.Snow;
@@ -168,9 +199,9 @@
             // 
             this.gvBXMX.AllowUserToAddRows = false;
             this.gvBXMX.AllowUserToDeleteRows = false;
-            this.gvBXMX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvBXMX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gvBXMX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gvBXMX.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gvBXMX.BackgroundColor = System.Drawing.Color.Snow;
@@ -189,19 +220,12 @@
             // 
             this.WarrantPrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.WarrantPrintDocument_PrintPage);
             // 
-            // btnReload
+            // printDialog1
             // 
-            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReload.FlatAppearance.BorderColor = System.Drawing.Color.BurlyWood;
-            this.btnReload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReload.Location = new System.Drawing.Point(483, 140);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(90, 23);
-            this.btnReload.TabIndex = 8;
-            this.btnReload.Text = "重载数据(&R)";
-            this.btnReload.UseVisualStyleBackColor = true;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            this.printDialog1.AllowCurrentPage = true;
+            this.printDialog1.Document = this.WarrantPrintDocument;
+            this.printDialog1.PrintToFile = true;
+            this.printDialog1.UseEXDialog = true;
             // 
             // BxdList
             // 
@@ -232,5 +256,7 @@
         private System.Windows.Forms.Button btnPrintPreview;
         private System.Drawing.Printing.PrintDocument WarrantPrintDocument;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

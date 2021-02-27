@@ -15,5 +15,8 @@ namespace MRS.DSL
         public static string MPERIOD_ID_PARM = "@MPeriodId";
         public static string ZHJFYLF_PARM = "@ZHJFYLF";
 
+        public static string BEGINDATE_PARM = "@BeginDate";
+        public static string ENDDATE_PARM = "@EndDate";
+
     }
 }

@@ -99,6 +99,26 @@ namespace MRS.SQLServerDAL
             return report;
         }
 
+        /// <summary>
+        /// 综合减负医药费报告,按选定月份统计。
+        /// </summary>
+        /// <param name="beginDate">开始日期时间（包括）</param>
+        /// <param name="endDate">结束日期时间（不包括）</param>
+        /// <param name="zhjfylf_greater_than">大于此综合减负医药费</param>
+        /// <returns></returns>
+        public DataTable Create_Report_ZHJFYLF_Stat_ByMonth(DateTime beginDate, DateTime endDate, decimal zhjfylf_greater_than)
+        {
+            DataTable report = new DataTable("ZHJFYLF");
+            Common.DBUtility.SQLProcedure Procedure = new SQLProcedure(ConnectionString.ConnectionStringMRS, CommandText.REPORT_ZHJFYLF_STAT_BYMONTH);
+            Procedure.SetInputValue(DSL.AccountBook.BEGINDATE_PARM, beginDate);
+            Procedure.SetInputValue(DSL.AccountBook.ENDDATE_PARM, endDate);
+            Procedure.SetInputValue(DSL.AccountBook.ZHJFYLF_PARM, zhjfylf_greater_than);
+
+            Procedure.ExecuteAdapter().Fill(report);
+            return report;
+
+        }
+
         #endregion
     }
 }

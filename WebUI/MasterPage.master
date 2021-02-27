@@ -57,8 +57,8 @@
                             <ul>
                                 <li><a href="Report_ZJLNSYQK.aspx">资金历年使用情况分析</a></li>
                                 <li><a href="Report_ZJJDSYQK.aspx">资金当年使用情况分析</a></li>
-                                <li><a href="Report_ZHJFYLF.aspx">综合减负医疗费查询</a></li>
-                                
+                                <li><a href="Report_ZHJFYLF.aspx">综合减负医疗费查询（指定年份）</a></li>
+                                <li><a href="Report_ZHJFYLF_Month.aspx">综合减负医疗费查询（指定月份）</a></li>
                             </ul>
                         </li>
                         <li>

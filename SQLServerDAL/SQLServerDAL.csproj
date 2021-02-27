@@ -84,6 +84,7 @@
     <Compile Include="DBProcedure\Insert_MPeriod.cs" />
     <Compile Include="DBProcedure\Insert_PsnType.cs" />
     <Compile Include="DBProcedure\Report_GRLNBX.cs" />
+    <Compile Include="DBProcedure\Report_ZHJFYLF_Stat_ByMonth.cs" />
     <Compile Include="DBProcedure\Report_ZHJFYLF_Stat.cs" />
     <Compile Include="DBProcedure\Report_ZJJDSYQK.cs" />
     <Compile Include="DBProcedure\Report_ZJLNSYQK.cs" />

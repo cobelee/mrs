@@ -17,3 +17,4 @@ D:\GithubRepoBank\MRS\Model\bin\Debug\MRS.Model.dll
 D:\GithubRepoBank\MRS\Model\bin\Debug\MRS.Model.pdb
 D:\GithubRepoBank\MRS\Model\obj\Debug\MRS.Model.dll
 D:\GithubRepoBank\MRS\Model\obj\Debug\MRS.Model.pdb
+D:\GithubRepoBank\MRS\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

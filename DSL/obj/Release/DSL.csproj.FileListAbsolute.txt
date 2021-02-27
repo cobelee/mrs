@@ -7,3 +7,4 @@ D:\GithubRepoBank\MRS\DSL\bin\Release\MRS.DSL.dll
 D:\GithubRepoBank\MRS\DSL\bin\Release\MRS.DSL.pdb
 D:\GithubRepoBank\MRS\DSL\obj\Release\MRS.DSL.dll
 D:\GithubRepoBank\MRS\DSL\obj\Release\MRS.DSL.pdb
+D:\GithubRepoBank\MRS\DSL\obj\Release\DSL.csprojResolveAssemblyReference.cache

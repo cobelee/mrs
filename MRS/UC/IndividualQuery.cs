@@ -219,5 +219,14 @@ namespace MRS.UC
             }
         }
 
+        private void btnSelectPrint_Click(object sender, EventArgs e)
+        {
+            if (printDialog1.ShowDialog(this) == DialogResult.OK)
+            {
+                printDialog1.Document = WarrantPrintDocument;
+                WarrantPrintDocument.PrinterSettings = printDialog1.PrinterSettings;
+                WarrantPrintDocument.Print();
+            }
+        }
     }
 }
